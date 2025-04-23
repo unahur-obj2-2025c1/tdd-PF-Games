@@ -9,6 +9,24 @@ public class CajaFuerteTest {
 
 	@Test
 	public void queLaCajaFuerteEsteAbiertaAlCrearse() {
-		
+		CajaFuerte caja = new CajaFuerte();
+		assertTrue(caja.estaAbierta());
 	}
+
+
+	@Test
+	public void queSePuedaCerrarLaCajaFuerteConUnCodigo() {
+		CajaFuerte caja = new CajaFuerte();
+		caja.cerrar(1234);
+		assertFalse(caja.estaAbierta());
+	}
+	
+	@Test
+	public void queSePuedaAbrirLaCajaFuerteConUnCodigo() {
+		CajaFuerte caja = new CajaFuerte();
+		caja.cerrar(1234);
+		caja.abrir(1234);
+		assertTrue(caja.estaAbierta());
+	}
+
 }
