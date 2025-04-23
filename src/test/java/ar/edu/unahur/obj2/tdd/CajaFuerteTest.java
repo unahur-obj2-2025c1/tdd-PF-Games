@@ -7,4 +7,8 @@ import org.junit.jupiter.api.Test;
 
 public class CajaFuerteTest {
 
+	@Test
+	public void queLaCajaFuerteEsteAbiertaAlCrearse() {
+		
+	}
 }
